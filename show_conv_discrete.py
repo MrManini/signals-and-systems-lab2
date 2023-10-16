@@ -179,8 +179,6 @@ def animate(frame):
     legend2.get_frame().set_facecolor('#11001c')  # Legend background color
     legend2.get_texts()[0].set_color('#ffffff')  # Legend text color
     ax2.set_xlim(-15, 16)
-
-
     # Clear the plot if the animation has finished
     if frame == 30:
         n_conv = np.array([])

@@ -144,10 +144,10 @@ class convolve_discrete(ttk.Frame):
 
         # Define dictionaries to map options to sets of images
         self.image_sets = {
-            ("Convolución 1", "Señal x[n]"): [PATH/"x_n/a.png", PATH/"h_n/b.png"],
-            ("Convolución 1", "Señal h[n]"): [PATH/"x_n/b.png", PATH/"h_n/a.png"],
-            ("Convolución 2", "Señal x[n]"): [PATH/"x_n/c.png", PATH/"h_n/d.png"],
-            ("Convolución 2", "Señal h[n]"): [PATH/"x_n/d.png", PATH/"h_n/c.png"],
+            ("Convolución 1", "Señal x[n]"): [PATH/"x_n/b.png", PATH/"h_n/a.png"],
+            ("Convolución 1", "Señal h[n]"): [PATH/"x_n/a.png", PATH/"h_n/b.png"],
+            ("Convolución 2", "Señal x[n]"): [PATH/"x_n/d.png", PATH/"h_n/c.png"],
+            ("Convolución 2", "Señal h[n]"): [PATH/"x_n/c.png", PATH/"h_n/d.png"],
         }
 
         # Create labels for displaying images

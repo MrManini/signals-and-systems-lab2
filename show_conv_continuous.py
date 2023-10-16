@@ -44,7 +44,7 @@ def x(t, x_name):
         condition3 = (t >= 0) & (t < 1)
         x1 = 0.5*t[condition1] + 2
         x2 = 1
-        x3 = -t[condition3] + 1
+        x3 = -t[condition3] + 1 #x(t) = -t+1
         x = np.zeros_like(t)
         x[condition1] = x1
         x[condition2] = x2
@@ -93,7 +93,7 @@ def h(t, t0, h_name):
         condition1 = (t >= -1+t0) & (t < 0+t0)
         condition2 = (t >= 0+t0) & (t < 2+t0)
         condition3 = (t >= 2+t0) & (t < 4+t0)
-        h1 = t[condition1] + 1 - t0
+        h1 = t[condition1] + 1 - t0 #h(-tau) = tau+1-t0 
         h2 = 1
         h3 = -0.5*t[condition3] + 2 + t0/2
         h = np.zeros_like(t)
@@ -129,7 +129,7 @@ x_colors = {
     "c": "#d90429",
     "d": "#ff0a54",
     "e": "#691312",
-    "f": "#7b0d1e"
+    "f": "#7b0d1e",
 }
 
 h_colors = {
@@ -224,7 +224,7 @@ def animate(frame):
     legend1.get_texts()[0].set_color('#ffffff')  # Legend text color
     legend1.get_texts()[1].set_color('#ffffff')
 
-
+    
     ax1.set_xlim(-9, 9)
     lower_limit = -0.1
     upper_limit = 2

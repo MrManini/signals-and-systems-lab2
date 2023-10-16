@@ -116,7 +116,17 @@ class main(ttk.Frame):
 
 
 if __name__ == '__main__':
-    app = ttk.Window("Segundo Laboratorio Señales y Sistemas", "halsloween")
-    app.iconbitmap(PATH / "others/logo.ico")
+    app = ttk.Window("Segundo Laboratorio Señales y Sistemas", "halloween")
+    if getattr(sys, 'frozen', False):
+        # If the script is frozen (e.g., when run as an executable)
+        # Use sys._MEIPASS to locate resources
+        BASE_PATH = Path(sys._MEIPASS)
+    else:
+        # When running the script directly, use the script's directory
+        BASE_PATH = Path(__file__).parent
+
+    # Use BASE_PATH to construct the path to the icon file
+    icon_path = BASE_PATH / "icons" / "others" / "logo.ico"
+    app.iconbitmap(icon_path)
     main_window = main(app)  # Keep a reference to the main window
     app.mainloop()
